@@ -61,19 +61,14 @@ a {
 
 /* FIGURE OUT HOW TO BOLD FONT TRANSITION */
 .logo a:hover {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 
 /* FIGURE OUT HOW TO CATEGORIZE MULTIPLE CLASSES UNDER SAME HOVER */
-.nav-links a:hover {
-  font-size: 1.75rem;
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
-}
 
-.footer-links a:hover {
+.nav-links a:hover,
+  .footer-links a:hover {
   font-size: 1.75rem;
   color: grey;
   text-decoration: underline;
@@ -274,34 +269,27 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
-.btn-color-2 {
+.btn-color-1 {
   border: rgb(53, 53, 53) 0.1rem solid;
 }
 
-.btn-color-1:hover,
-.btn-color-2:hover {
-  cursor: pointer;
-}
 
 .btn-color-1:hover {
+  cursor: pointer;  
   background: rgb(53, 53, 53);
   color: white;
   padding: 1.25rem;
   width: 9rem;
-}
-
-.btn-color-1:hover {
   background: rgb(0, 0, 0);
 }
 
-.btn-color-2 {
+/* .btn-color-2 {
   background: none;
 }
 
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
-}
+} */
 
 .btn-container {
   gap: 1rem;
@@ -366,6 +354,7 @@ section {
 
 .text-container {
   font-size: 1.1rem;
+  text-align: center;
 }
 
 /* EXPERIENCE SECTION */
