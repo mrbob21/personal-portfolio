@@ -9,6 +9,13 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  /* background-color: skyblue; */
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 html {
@@ -36,7 +43,8 @@ nav,
 nav {
   justify-content: space-around;
   align-items: center;
-  height: 17vh;
+  height: 16vh;
+  background-color: lightgreen;
 }
 
 .nav-links {
@@ -51,11 +59,34 @@ a {
   text-decoration-color: white;
 }
 
-a:hover {
+/* FIGURE OUT HOW TO BOLD FONT TRANSITION */
+.logo a:hover {
+  font-size: 2.5rem;
+}
+
+/* FIGURE OUT HOW TO CATEGORIZE MULTIPLE CLASSES UNDER SAME HOVER */
+.nav-links a:hover {
+  font-size: 1.75rem;
   color: grey;
   text-decoration: underline;
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
+}
+
+.footer-links a:hover {
+  font-size: 1.75rem;
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.contact-info-upper-container a:hover {
+  font-size: 1.4rem;
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);  
 }
 
 .logo {
@@ -150,8 +181,9 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 96vh;
-  margin: 0 10rem;
+  height: 100vh;
+  padding-left: 25vh;
+  padding-right: 25vh;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -166,10 +198,18 @@ section {
   display: flex;
   justify-content: center;
   gap: 5rem;
-  height: 80vh;
+  height: 84vh;
+  background-color: skyblue;
 }
 
 .section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+#about .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
@@ -186,6 +226,7 @@ section {
 }
 
 .section__text__p1 {
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -211,6 +252,10 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+}
+
+#socials-container .icon:hover {
+  height: 2.25rem;
 }
 
 /* BUTTONS */
@@ -239,10 +284,11 @@ section {
   cursor: pointer;
 }
 
-.btn-color-1,
-.btn-color-2:hover {
+.btn-color-1:hover {
   background: rgb(53, 53, 53);
   color: white;
+  padding: 1.25rem;
+  width: 9rem;
 }
 
 .btn-color-1:hover {
@@ -262,16 +308,32 @@ section {
 }
 
 /* ABOUT SECTION */
+.section-container {
+  gap: 4rem;
+  height: 73%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  /* margin: auto 0; */
+}
 
 #about {
   position: relative;
+  background-color: lightgreen;
 }
 
 .about-containers {
-  gap: 2rem;
+  gap: 4rem;
   margin-bottom: 2rem;
-  margin-top: 2rem;
 }
+
+#projects .about-containers {
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
 
 .about-details-container {
   justify-content: center;
@@ -289,35 +351,28 @@ section {
 
 .arrow {
   position: absolute;
-  right: -5rem;
-  bottom: 2.5rem;
+  right: 10%;
+  bottom: 7%;
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1rem;
   flex: 1;
-  background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
 
-.section-container {
-  gap: 4rem;
-  height: 80%;
-}
-
-.section__pic-container {
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+.text-container {
+  font-size: 1.1rem;
 }
 
 /* EXPERIENCE SECTION */
 
 #experience {
   position: relative;
+  background-color: skyblue;
 }
 
 .experience-sub-title {
@@ -331,6 +386,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 
 .article-container {
@@ -357,6 +413,8 @@ article .icon {
 
 #projects {
   position: relative;
+  height: 200vh;
+  background-color: lightgreen;
 }
 
 .color-container {
@@ -386,7 +444,8 @@ article .icon {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: 82vh;
+  background-color: skyblue;
 }
 
 .contact-info-upper-container {
@@ -420,15 +479,28 @@ article .icon {
   height: 2.5rem;
 }
 
-.phone-icon {
+.phone-icon { /* FIND TRANSPARENT PHONE ICON */
   height: 2.25rem;
 }
 
 /* FOOTER SECTION */
 
+footer,
+.footer-links {
+  display: flex;
+}
+
 footer {
-  height: 26vh;
-  margin: 0 1rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 18vh;
+  background-color: lightgreen;
+}
+
+.footer-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
 }
 
 footer p {
