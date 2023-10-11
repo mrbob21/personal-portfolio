@@ -2,4 +2,4 @@ This is my personal portfolio, where you can find my bio, skills, recent project
 
 Link: https://enoch-amat-portfolio.netlify.app/
 
-Published 9/13/2023
+Updated 10/11/2023
