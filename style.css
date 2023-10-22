@@ -326,10 +326,10 @@ section {
 .about-details-container {
   justify-content: center;
   flex-direction: column;
+  display: flex;
 }
 
-.about-containers,
-.about-details-container {
+.about-containers {
   display: flex;
 }
 
